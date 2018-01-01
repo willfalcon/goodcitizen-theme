@@ -134,7 +134,7 @@ function gc_nav_class() {
 
   }
 
-  return $gc_nav_class;
+  echo $gc_nav_class;
 }
 endif;
 

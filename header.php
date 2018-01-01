@@ -28,10 +28,18 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-91410917-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-91410917-1');
+    </script>
 
     <?php wp_head(); ?>
     <?php gc_build_head_styles(); ?>
-
   </head>
 
   <body <?php body_class(); ?>>
@@ -39,10 +47,11 @@
 
 
       <?php
-      //adds a div containing the navbar and first row with the background row if the 1st row has a background image and transparent header setting is checked.
-       gc_big_background_row(); ?>
+        //adds a div containing the navbar and first row with the background row if the 1st row has a background image and transparent header setting is checked.
+        gc_big_background_row();
+      ?>
 
-      <nav class="navbar navbar-expand-md<?php echo gc_nav_class(); ?>">
+      <nav class="navbar navbar-expand-md<?php gc_nav_class(); ?>">
 
         <div class="col-8 col-md-4">
           <a class="navbar-brand d-flex w-50 mr-auto" href="<?php bloginfo('url'); ?>">
